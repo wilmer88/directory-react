@@ -1,15 +1,25 @@
 import './App.css';
-import  Navbar from "./components/Navbar";
-import Table from "./components/Table";
+import  Navbar from "./components/Navbar/Navbar";
+import Table from "./components/Table/Table";
 import Wrapper from "./components/wrapper/wrapper";
+
+
 
 function App() {
   return (
     <div className="App">
-      <Wrapper>
+      
      <Navbar />
-     <Table />
+     <Wrapper>
+       {employeeDirectory.map(empliado => (
+          <Table 
+          firstName= {firstName}
+          />
+       ))}
+     
      </Wrapper>
+     
+     
     </div>
   );
 }
