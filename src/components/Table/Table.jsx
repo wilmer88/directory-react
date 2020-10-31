@@ -1,34 +1,13 @@
-const employeeDirectory= [
-  {
-    firstName: "vegeta",
-    lastName: "prince",
-    email: "vegeta@gmail.com"
-  },
-  {
-    firstName: "felix",
-    lastName: "gracia",
-    email: "felix@gmail.com"
-  },
-  {firstName: "ben",
-  lastName: "Askren",
-  email: "bem@gmail.com"
-}
-]
 
-{employeeDirectory.map((empliado) => (
-  console.log(empliado)
-))}
+
+
 
 const Table = () => {
     return (
-      
-      
-     
-        
-   <table class="table">
+      <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">employeeDirectory</th>
     <th scope="col">First Name</th>
     <th scope="col">Last Name</th>
     <th scope="col">email</th>
@@ -36,10 +15,10 @@ const Table = () => {
   </thead>
   <tbody>
     <tr>
-      <th id="uno" scope="row">1</th>
-    <td>{}</td>
-      <td>{}</td>
-    <td>{}</td>
+    <th scope="id">{this.props.id}</th>
+    <td>{this.props.firstName}</td>
+      <td>{this.props.lastName}</td>
+    <td>{this.props.email}</td>
     </tr>
     <tr>
       <th scope="row">2</th>
