@@ -1,0 +1,39 @@
+
+    [ {
+            "id": "Artificial Intelligence",
+            "firstName": "vegeta",
+            "lastName": "prince",
+            "email": "vegeta@gmail.com"
+          },
+          {
+            "id": "biochemists",
+            "firstName": "felix",
+            "lastName": "gracia",
+            "email": "felix@gmail.com"
+          },
+          {
+            "id": "physicist",
+            "firstName": "ben",
+          "lastName": "Askren",
+          "email": "bem@gmail.com"
+        },
+        {
+          "id": "engineer",
+          "firstName": "frank",
+        "lastName": "lee",
+        "email": "lee@gmail.com"
+      },
+      {
+        "id": "security",
+        "firstName": "evans",
+      "lastName": "woodly",
+      "email": "woodly@gmail.com"
+    },
+    {
+      "id": "Health",
+      "firstName": "lulu",
+    "lastName": "chavez",
+    "email": "chavez@gmail.com"
+  }
+
+        ]

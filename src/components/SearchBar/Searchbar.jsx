@@ -1,16 +1,48 @@
-import React from 'react';
+import React, { Component } from "react";
 
-const Searchbar = () => {
+class Searchbar extends Component {
+  state = {
+    person: "",
+  };
+
+  handleInputChange = (event) => {
+    const {name, value} = event.target;
+    this.setState({
+      [name]: value,
+    })
+  }
+
+  iseClick = () => {
+    console.log("you clicked button");
+    // this.setState()
+  };
+
+  render() {
     return (
-        <>
-            <div className="input-group input-group-lg">
-  <div className="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
-  </div>
-  <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"/>
-</div>
-        </>
+      <>
+        <div className="input-group mb-3">
+          <input
+            name="person"
+            value={this.state.person}
+            onchange={this.handleInputChange}
+            type="text"
+            className="form-control"
+            placeholder="find somone"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <div className="input-group-append">
+            <button
+              className="btn btn-outline-secondary"
+              onClick={this.iseClick}
+            >
+              Button
+            </button>
+          </div>
+        </div>
+      </>
     );
-};
+  }
+}
 
 export default Searchbar;
