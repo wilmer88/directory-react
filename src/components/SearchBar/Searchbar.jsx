@@ -5,7 +5,7 @@ class Searchbar extends Component {
     person: "",
   };
 
-  handleInputChange = (event) => {
+  handleFormSubmit = (event) => {
     const {name, value} = event.target;
     this.setState({
       [name]: value,
@@ -24,10 +24,10 @@ class Searchbar extends Component {
           <input
             name="person"
             value={this.state.person}
-            onchange={this.handleInputChange}
+            onchange={this.handleFormSubmit}
             type="text"
             className="form-control"
-            placeholder="find somone"
+            placeholder="find somone name"
             aria-label="Recipient's username"
             aria-describedby="button-addon2"
           />
