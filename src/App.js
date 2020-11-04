@@ -26,22 +26,9 @@ Employees: Employees
       <Navbar />
       <Searchbar />
      
-    <SearchTable />
+    {/* <SearchTable /> */}
      
-      <Wrapper>
 
-        {this.state.Employees.map((empliado) => (
-           <Table 
-           id={empliado.id}
-           firstName={empliado.firstName}
-           lastName={empliado.lastName}
-           email={empliado.email}
-           />
-           
-
-        ))}
-        
-      </Wrapper>
       
 
      

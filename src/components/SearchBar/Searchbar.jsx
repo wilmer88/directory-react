@@ -1,21 +1,23 @@
 import React, { Component } from "react";
+import employees from "../../Employees.json"
 
 class Searchbar extends Component {
   state = {
-    person: "",
+    result:employees,
+    person: employees,
   };
-
-  handleFormSubmit = (event) => {
-    const {name, value} = event.target;
-    this.setState({
-      [name]: value,
-    })
-  }
 
   iseClick = () => {
     console.log("you clicked button");
     // this.setState()
   };
+
+  handleInputChange = event => {
+    const value = event.target.value;
+    console.log(value)
+    const filtered = this.state.person.filter(query => query.firstName.includes(value))
+    this.setState({result: filtered})
+  }
 
   render() {
     return (
@@ -23,8 +25,7 @@ class Searchbar extends Component {
         <div className="input-group mb-3">
           <input
             name="person"
-            value={this.state.person}
-            onchange={this.handleFormSubmit}
+            onChange={this.handleInputChange}
             type="text"
             className="form-control"
             placeholder="find somone name"
@@ -40,6 +41,29 @@ class Searchbar extends Component {
             </button>
           </div>
         </div>
+        <table className="table table-striped table-dark">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">E-mail</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              this.state.result.map(element => (
+                <tr>
+                  <td>{element.id}</td>
+                  <td>{element.firstName}</td>
+                  <td>{element.lastName}</td>
+                  <td>{element.email}</td>
+                </tr>
+              )
+              )
+            }
+          </tbody>
+        </table>
       </>
     );
   }
