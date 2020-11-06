@@ -14,9 +14,7 @@ class App extends Component {
   state ={
 Employees: Employees
   };
-  findPerson = (event) => {
-    const {Employees} = event.target;
-  }
+ 
   render() {
     return (
       <div>
