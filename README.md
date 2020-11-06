@@ -5,3 +5,5 @@ BCS bootcamp assingment was to create a employee directory, made to easly access
 Technologies used
 *js react
 *bootstrap framework
+![screenshot](./)
+[this is the link to the page](https://budget-keepup.herokuapp.com/)
